@@ -2,31 +2,32 @@
 
 	class Tamu_model extends CI_Model
 	{
+
 		private $_table = "tamu";
-public $id;
-public $nama;
-public $jabatan;
-public $instansi;
-public $tujuan;
-public $gambar = "default.jpg";
+		public $id_tamu;
+		public $nama_tamu;
+		public $jabatan_tamu;
+		public $instansi_tamu;
+		public $tujuan_tamu;
+		public $gambar_tamu = "default.jpg";
 
 	public function rules()
 	{
 		return [
 				['field' => 'nama_tamu',
-				'label' => 'nama',
+				'label' => 'Nama_Tamu',
 				'rules' => 'required'],
 
 				['field' => 'jabatan_tamu',
-				'label' => 'jabatan',
+				'label' => 'Jabatan_Tamu',
 				'rules' => 'required'],
 
 				['field' => 'instansi_tamu',
-				'label' => 'instansi',
+				'label' => 'Instansi_Tamu',
 				'rules' => 'required'],
 
 				['field' => 'tujuan_tamu',
-				'label' => 'tujuan',
+				'label' => 'Tujuan_Tamu',
 				'rules' => 'required'],
 		];
 	}
@@ -40,6 +41,6 @@ public $gambar = "default.jpg";
 	{
 		return $this->db->get_where($this->_table, ["id_tamu" => $id])->row();
 	}
-}
+  }
 
  ?>

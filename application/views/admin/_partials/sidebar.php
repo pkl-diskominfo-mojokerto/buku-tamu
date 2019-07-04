@@ -5,7 +5,7 @@
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
 
-            <a href="index.html" class="nav-link"><i class="fas fa-home"></i></a>
+            <a href="index.html" class="nav-link"><i class="  "></i></a>
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header"></li>
