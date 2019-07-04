@@ -7,12 +7,14 @@
 		{
 			parent::__construct();
 			$this->load->model('Tamu_model');
+			$this->load->library('form_validation');
 			$this->load->library('Template_Admin', 'template_admin');
 		}
 
 		function index()
 		{
-			$this->template_admin->display('admin/content/viewdata_user');
+			$data['tamu'] = $this->Tamu_model->getAll();
+			$this->template_admin->display('admin/content/viewdata_user', $data);
 		}
 
 
