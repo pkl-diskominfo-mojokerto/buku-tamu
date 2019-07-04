@@ -1,5 +1,5 @@
-
   <div class="container">
+  <div class="row mt-5">
 
     <div class="card o-hidden border-0 shadow-lg my-5 col-lg-12 mx-auto">
       <div class="card-body p-0">
@@ -8,7 +8,7 @@
            
            <div class="col-lg-6">
             <div class="text-center">
-             <div class="p-5">
+             <div class="p-1">
               <div class="alert alert-primary" role="alert">
               Kamera
             </div>
@@ -117,4 +117,8 @@
 }
 </script>
 
+
+</body>
+</div>
+</div>
   

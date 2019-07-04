@@ -1,3 +1,5 @@
+  <div class="container">
+  <div class="row">
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
 
@@ -18,3 +20,6 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?> ">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/components.css') ?>">
 
+<body>
+</div>
+</div>
