@@ -10,23 +10,17 @@
 
         <!-- Search Engine -->
            <?php echo $_search; ?>
-
+        
         <!-- NavBar -->
             <?php echo $_navbar;  ?>
 
+        <!-- Main Content -->
+            <?php echo $_content; ?>
+        
         <!-- SideBar -->
             <?php echo $_sidebar; ?>
-              
-              
-      <!-- Main Content -->
-
-
-      <!-- Main Content -->
-     
-        <!-- Footer -->
-            <?php  ?>
-
-          <!-- JS -->
+        
+        <!-- JS -->
             <?php echo $_js; ?>
 
 </body>
