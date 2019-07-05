@@ -1,7 +1,9 @@
-  <div class="container">
+<div class="main-content-center">
+  <br>
+    <div class="container">
   <div class="row mt-5">
 
-    <div class="card o-hidden border-0 shadow-lg my-5 col-lg-12 mx-auto">
+    <div class="card o-hidden border-0 my-5 col-lg-12 mx-auto">
       <div class="card-body p-0">
        
         <div class="row">
@@ -52,14 +54,14 @@
                 </div>
                 </div>
                
-                <button type="submit" class="btn btn-primary btn-user btn-block">
+                <button type="submit" class="btn btn-primary">
                   Simpan
                 </button>
                
                
               </form>
             </form>
-              <hr>
+              <br>
               
             </div>
           </div>
@@ -124,3 +126,4 @@
 </div>
 </div>
   
+</div>
