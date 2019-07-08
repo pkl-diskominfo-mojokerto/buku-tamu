@@ -38,6 +38,7 @@
         </div>
 
           <div class="col-lg-6 ">
+              <i class="fa fa-users fa-2x mt-3 float-right"></i>
 
             <div class="p-5">
               <div class="text-center">
@@ -63,7 +64,7 @@
                 </div>
                 </div>
                
-                <button type="submit" class="btn btn-primary float-right">
+                <button type="submit" class="btn btn-primary float-right mb-3">
                   Simpan
                 </button>
                
@@ -81,7 +82,7 @@
 
   </div>
 
-   <script type="text/javascript">
+   <!-- <script type="text/javascript">
     // seleksi elemen video
     var video = document.querySelector("#video-webcam");
 
@@ -128,7 +129,7 @@
     img.src = canvas.toDataURL('image/png');
     document.body.appendChild(img);
 }
-</script>
+</script> -->
 
 
 </body>

@@ -1,9 +1,12 @@
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
   <div class="container">
+  <a class="btn btn-danger btn-lg mt-3 float-right fa fa-sign-in-alt fa-3x "  href="#" role="button">Admin</a>
+  
   <div class="row">
+
  <!--  <div class="text-monospace float-right">This is in monospace</div> -->
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-
 
   <title><?php  echo SITE_NAME ." : ". ucfirst($this->uri->segment(1)) ." - ". ucfirst($this->uri->segment(2)) ?></title>
 
