@@ -1,4 +1,4 @@
-  <ul class="navbar-nav navbar-right">
+    <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-toggle="dropdown" class="<!-- nav-link dropdown-toggle nav-link-lg nav-link-user">
            <!--  <img alt="image" src="<?php echo base_url('assets/img/avatar/avatar-1.png') ?>" class="rounded-circle mr-1"> -->
 

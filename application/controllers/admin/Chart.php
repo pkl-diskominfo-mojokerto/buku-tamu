@@ -12,7 +12,8 @@
 
 		function index()
 		{
-			$this->template_admin->display('admin/content/viewchart_user');
+			$data['data'] = $this->Tamu_model->get_data_chart();	
+			$this->template_admin->display('admin/content/viewchart_user', $data);
 		}
 
 

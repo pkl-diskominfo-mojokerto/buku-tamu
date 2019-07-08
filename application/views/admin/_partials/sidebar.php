@@ -10,7 +10,7 @@
           <ul class="sidebar-menu">
               <li class="menu-header"></li>
               <li><a href="#"><i class="fas fa-fire"></i><span><b>Dashboard</b></span></a></li>
-              <li><a class="menu-header" href=""><i class="fas fa-memory"></i><span><b>Data Tamu</b></span></a></li>
+              <li><a class="menu-header" href=""><i class="fas fa-address-card"></i><span><b>Data Tamu</b></span></a></li>
               <li><a class="menu-header" href=""><i class="fas fa-print"></i><span><b>Laporan</b></span></a></li>
 
              

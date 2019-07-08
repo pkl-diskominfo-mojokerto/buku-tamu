@@ -10,7 +10,8 @@
 		public $instansi_tamu;
 		public $tujuan_tamu;
 		public $gambar_tamu = "default.jpg";
-
+		public $tanggal;
+		
 	public function rules()
 	{
 		return [
@@ -32,6 +33,12 @@
 		];
 	}
 	
+	public function get_tamu_list($limit, $start)
+	{
+		$query = $this->db->get($this->_table, $limit, $start);
+		return $query;
+	}
+
 	public function getAll()
 	{
 		return $this->db->get($this->_table)->result();
