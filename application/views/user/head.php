@@ -1,7 +1,9 @@
   <div class="container">
   <div class="row">
+ <!--  <div class="text-monospace float-right">This is in monospace</div> -->
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+
 
   <title><?php  echo SITE_NAME ." : ". ucfirst($this->uri->segment(1)) ." - ". ucfirst($this->uri->segment(2)) ?></title>
 

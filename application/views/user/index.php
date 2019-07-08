@@ -1,17 +1,24 @@
 <div class="main-content-center">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
   <br>
     <div class="container">
   <div class="row mt-5">
 
     <div class="card o-hidden border-0 my-5 col-lg-12 mx-auto">
       <div class="card-body p-0">
-       
+         <!--  <?php if( validation_errors() ) : ?>
+              <div class="alert alert-danger" role="alert">
+              <?= validation_errors(); ?>
+              </div>
+           <?php endif; ?> -->
+         
         <div class="row">
            
            <div class="col-lg-6">
             <div class="text-center">
              <div class="p-1">
-              <div class="alert alert-primary" role="alert">
+              <div class="alert alert-primary" role="alert" mt-3>
+                <i class="fa fa-camera"></i>
               Kamera
             </div>
             
@@ -24,37 +31,39 @@
            </video>
            <hr>
           
-           <button  onclick="takeSnapshot()"  >Ambil Gambar</button>
+           <button  onclick="takeSnapshot()"  >Ambil Gambar2</button>
         
         </div>
         </div>
         </div>
 
           <div class="col-lg-6 ">
+
             <div class="p-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Pengisian Buku Tamu</h1>
               </div>
               
-
+              <?php echo form_open('user/index');?>
               <form class="user">
+                  
               <form action="" method="post">
                <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Nama">
+                  <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama" required>
               
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="jabatan" name="jabatan" placeholder="Jabatan">
+                  <input type="text" name="jabatan" class="form-control form-control-user" id="jabatan"  placeholder="Jabatan" required>
                 </div>
                 <div class="form-group">
-                <input type="text" class="form-control form-control-user" id="instansi" name="instansi" placeholder="Instansi">
+                <input type="text" name="instansi" class="form-control form-control-user" id="instansi"  placeholder="Instansi" required>
                 </div>  
                 <div class="form-group">
-                <input type="text" class="form-control form-control-user" id="tujuan" name="tujuan" placeholder="Tujuan">
+                <input type="text" name="tujuan" class="form-control form-control-user" id="tujuan"  placeholder="Tujuan" required>
                 </div>
                 </div>
                
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary float-right">
                   Simpan
                 </button>
                
@@ -125,5 +134,5 @@
 </body>
 </div>
 </div>
-  
 </div>
+
