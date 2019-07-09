@@ -27,6 +27,7 @@
  		 
 			if( $this->form_validation->run() != FALSE ){	
 			$this->Tamu_model->tambahDataUser();
+			$this->session->set_flashdata('flash', 'Ditambahkan');
 			redirect('user');
 			 
 			} else {

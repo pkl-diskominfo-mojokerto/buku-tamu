@@ -51,22 +51,29 @@
 
 	public function tambahDataUser()
 	{
-		$data = [
-			"nama_tamu" => $this->input->post('nama', true),
-			"jabatan_tamu" => $this->input->post('jabatan', true),
-			"instansi_tamu" => $this->input->post('instansi', true),
-			"tujuan_tamu" => $this->input->post('tujuan', true),
-			];
-			/*$gambar_tamu = $this->input->post('image'),*/
-			/*$gambar_tamu = str_replace('data:image/jpeg;base64,','', $image),
-			$gambar_tamu = base64_decode($image),
-			$filename = 'image_'.time().'.png',
-			file_put_contents(FCPATH.'/uploads/'.$filename,$gambar_tamu),
+		/*$data = [*/
+			$nama_tamu = $this->input->post('nama', true);
+			$jabatan_tamu = $this->input->post('jabatan', true);
+			$instansi_tamu = $this->input->post('instansi', true);
+			$tujuan_tamu = $this->input->post('tujuan', true);
+			$gambar_tamu = str_replace('data:image/jpeg;base64,','', $gambar_tamu);
+			$gambar_tamu = base64_decode($gambar_tamu);
+			$filename = 'image_'.time().'.png';
+			file_put_contents(FCPATH.'/uploads/'.$filename,$gambar_tamu);
+			$gambar_tamu = $this->input->post('image');
 			
 			$data = array(
-			'image' => $gambar_tamu );*/
+				'nama' => $nama_tamu,
+				'jabatan' => $jabatan_tamu,
+				'instansi' => $instansi_tamu,
+				'tujuan' => $tujuan_tamu,
+				'image' => $filename,
+			);
+			
 
-		$this->db->insert('tamu', $data); 
+			/*];*/
+
+		$this->db->insert('tamu', $data); 	
 	}
   }
 

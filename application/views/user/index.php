@@ -2,7 +2,20 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
   <br>
     <div class="container">
-  <div class="row mt-5">
+      <?php if( $this->session->flashdata('flash') ) : ?>
+
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+         Data User <strong>berhasil </strong><?= $this->session->flashdata('flash'); ?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>      
+    </div>  
+  </div>
+      <?php endif; ?>
+  <div class="row mt-3">
 
     <div class="card o-hidden border-0 my-2 col-lg-12 mx-auto">
       <div class="card-body p-0">
@@ -82,7 +95,7 @@
 
   </div>
 
-   <!-- <script type="text/javascript">
+   <script type="text/javascript">
     // seleksi elemen video
     var video = document.querySelector("#video-webcam");
 
@@ -129,7 +142,7 @@
     img.src = canvas.toDataURL('image/png');
     document.body.appendChild(img);
 }
-</script> -->
+</script>
 
 
 </body>
