@@ -48,6 +48,26 @@
 	{
 		return $this->db->get_where($this->_table, ["id_tamu" => $id])->row();
 	}
+
+	public function tambahDataUser()
+	{
+		$data = [
+			"nama_tamu" => $this->input->post('nama', true),
+			"jabatan_tamu" => $this->input->post('jabatan', true),
+			"instansi_tamu" => $this->input->post('instansi', true),
+			"tujuan_tamu" => $this->input->post('tujuan', true),
+			];
+			/*$gambar_tamu = $this->input->post('image'),*/
+			/*$gambar_tamu = str_replace('data:image/jpeg;base64,','', $image),
+			$gambar_tamu = base64_decode($image),
+			$filename = 'image_'.time().'.png',
+			file_put_contents(FCPATH.'/uploads/'.$filename,$gambar_tamu),
+			
+			$data = array(
+			'image' => $gambar_tamu );*/
+
+		$this->db->insert('tamu', $data); 
+	}
   }
 
  ?>

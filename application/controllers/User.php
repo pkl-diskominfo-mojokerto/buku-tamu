@@ -5,7 +5,8 @@
 	public function __construct()
 	{
 		parent::__construct();
-		
+	 
+		$this->load->model('Tamu_model');
 		$this->load->library('form_validation');
 	}
 
@@ -16,7 +17,8 @@
 			/* $this->load->view('user/head');
 			 $this->load->view('user/search');
 			 $this->load->view('user/index');*/
-			
+			$data['tamu'] = $this->Tamu_model->getAll();
+
 			$this->form_validation->set_rules('nama', 'Nama', 'required');
 			$this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
 			$this->form_validation->set_rules('instansi', 'Instansi', 'required');
@@ -24,7 +26,8 @@
 
  		 
 			if( $this->form_validation->run() != FALSE ){	
-			echo "<script>alert('berhasil');</script>";
+			$this->Tamu_model->tambahDataUser();
+			redirect('user');
 			 
 			} else {
 				$this->load->view('user/head');

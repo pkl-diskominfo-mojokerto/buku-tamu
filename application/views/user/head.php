@@ -1,6 +1,12 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+  <br>
   <div class="container">
-  <a class="btn btn-danger btn-lg mt-3 float-right fa fa-sign-in-alt fa-3x "  href="#" role="button">Admin</a>
+    <div class="row">
+      <div class="col-lg-12">
+  <a href="<?= base_url(); ?>admin/overview" class="btn btn-danger btn-lg mt-3 fa fa-sign-in-alt fa-3x float-right">Admin</a>
+      </div>
+    </div>
+  </div>
   
   <div class="row">
 

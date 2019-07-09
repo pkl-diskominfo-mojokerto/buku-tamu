@@ -4,7 +4,7 @@
     <div class="container">
   <div class="row mt-5">
 
-    <div class="card o-hidden border-0 my-5 col-lg-12 mx-auto">
+    <div class="card o-hidden border-0 my-2 col-lg-12 mx-auto">
       <div class="card-body p-0">
          <!--  <?php if( validation_errors() ) : ?>
               <div class="alert alert-danger" role="alert">
@@ -31,7 +31,7 @@
            </video>
            <hr>
           
-           <button  onclick="takeSnapshot()"  >Ambil Gambar2</button>
+           <button  onclick="takeSnapshot()" class="fa fa-camera-retro" >Ambil Gambar</button>
         
         </div>
         </div>
@@ -64,7 +64,7 @@
                 </div>
                 </div>
                
-                <button type="submit" class="btn btn-primary float-right mb-3">
+                <button type="submit" name="tambah" class="btn btn-primary float-right mb-3">
                   Simpan
                 </button>
                
