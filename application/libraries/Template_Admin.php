@@ -12,7 +12,6 @@
 			$data['_navbar'] = $this->_ci->load->view('admin/_partials/navbar', $data, true);
 			$data['_js'] = $this->_ci->load->view('admin/_partials/js', $data, true);
 			$data['_search'] = $this->_ci->load->view('admin/_partials/search', $data, true);
-			$data['_footer'] = $this->_ci->load->view('admin/_partials/footer', $data, true);
 
 			$this->_ci->load->view('/admin/overview.php', $data);
 

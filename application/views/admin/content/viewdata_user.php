@@ -1,12 +1,13 @@
 <div class="main-content">
    <div class="row-center" >
        <div class="col-lg-11 col-md-11 col-sm-12" >
-            <div class="card card-statistic-2" >
+            <div class="card shadow-primary card-statistic-2" >
         <div class="card-stats" >
-            <div class="card-stats-title"><h4 align="center">Tempat Table Data User</h4> 
+            <div class="card-stats-title"><div class="card card-bar text-white shadow-primary bg-info"><h4 align="center">Data User</h4> </div>
+              
                 <div class="card-stats-item-center">
                   <div class="table-responsive-lg">
-                    <table class="table table-bordered table-hover table-striped">
+                    <table class="table table-bordered table-hover shadow-primary">
                   <tr>
                       <th width="50">No.</th>
                       <th width="150">Nama Lengkap</th>

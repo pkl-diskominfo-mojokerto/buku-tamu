@@ -33,6 +33,20 @@
 		];
 	}
 	
+	public function get_data_chart()
+	{
+		 	$query = $this->db->query("SELECT * FROM tamu WHERE tanggal");
+
+		 	if($query->num_rows() > 0) 
+		 		{
+		 			foreach($query->result() as $data)
+		 			{
+		 				$hasil[] = $data;
+		 			}
+		 			return $hasil;
+		 		}	
+	}
+
 	public function get_tamu_list($limit, $start)
 	{
 		$query = $this->db->get($this->_table, $limit, $start);

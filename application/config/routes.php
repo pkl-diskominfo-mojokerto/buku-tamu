@@ -53,5 +53,6 @@ $route['default_controller'] = '';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['admin'] = 'admin/overview';		
+$route['admin'] = 'admin/overview';
+1
 	
