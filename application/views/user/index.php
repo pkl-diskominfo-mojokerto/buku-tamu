@@ -4,7 +4,7 @@
     <div class="container">
   <div class="row mt-5">
 
-    <div class="card o-hidden border-0 my-5 col-lg-12 mx-auto">
+    <div class="card o-hidden border-0 my-2 col-lg-12 mx-auto">
       <div class="card-body p-0">
          <!--  <?php if( validation_errors() ) : ?>
               <div class="alert alert-danger" role="alert">
@@ -31,13 +31,14 @@
            </video>
            <hr>
           
-           <button  onclick="takeSnapshot()"  >Ambil Gambar2</button>
+           <button  onclick="takeSnapshot()" class="fa fa-camera-retro" >Ambil Gambar</button>
         
         </div>
         </div>
         </div>
 
           <div class="col-lg-6 ">
+              <i class="fa fa-users fa-2x mt-3 float-right"></i>
 
             <div class="p-5">
               <div class="text-center">
@@ -63,7 +64,7 @@
                 </div>
                 </div>
                
-                <button type="submit" class="btn btn-primary float-right">
+                <button type="submit" name="tambah" class="btn btn-primary float-right mb-3">
                   Simpan
                 </button>
                
@@ -81,7 +82,7 @@
 
   </div>
 
-   <script type="text/javascript">
+   <!-- <script type="text/javascript">
     // seleksi elemen video
     var video = document.querySelector("#video-webcam");
 
@@ -128,7 +129,7 @@
     img.src = canvas.toDataURL('image/png');
     document.body.appendChild(img);
 }
-</script>
+</script> -->
 
 
 </body>

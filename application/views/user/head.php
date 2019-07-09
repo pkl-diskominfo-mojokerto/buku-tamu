@@ -1,9 +1,18 @@
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+  <br>
   <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+  <a href="<?= base_url(); ?>admin/overview" class="btn btn-danger btn-lg mt-3 fa fa-sign-in-alt fa-3x float-right">Admin</a>
+      </div>
+    </div>
+  </div>
+  
   <div class="row">
+
  <!--  <div class="text-monospace float-right">This is in monospace</div> -->
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-
 
   <title><?php  echo SITE_NAME ." : ". ucfirst($this->uri->segment(1)) ." - ". ucfirst($this->uri->segment(2)) ?></title>
 
