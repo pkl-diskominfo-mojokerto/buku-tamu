@@ -8,11 +8,12 @@
 			parent::__construct();
 			$this->load->library('pagination');
 			$this->load->model('Tamu_model');
-			$this->load->library('Template_Admin', 'template_admin');
+			
 		}
 
 		function index()
 		{
+				$this->load->library('Template_Admin', 'template_admin');
 			
 
 			$config['base_url'] = site_url('index.php/admin/data'); 
@@ -49,7 +50,12 @@
  
         $data['pagination'] = $this->pagination->create_links();
 
-        $data['tamu'] = $this->Tamu_model->getAll();
+       
+        if ( $this->input->post('keyword') ) {
+				$data['tamu'] = $this->Tamu_model->cariDataTamu();
+		}
+		else 
+			 $data['tamu'] = $this->Tamu_model->getAll();
 	
  
         //load view mahasiswa view

@@ -33,20 +33,6 @@
 		];
 	}
 	
-	public function get_data_chart()
-	{
-		 	$query = $this->db->query("SELECT * FROM tamu WHERE tanggal");
-
-		 	if($query->num_rows() > 0) 
-		 		{
-		 			foreach($query->result() as $data)
-		 			{
-		 				$hasil[] = $data;
-		 			}
-		 			return $hasil;
-		 		}	
-	}
-
 	public function get_tamu_list($limit, $start)
 	{
 		$query = $this->db->get($this->_table, $limit, $start);
@@ -55,40 +41,51 @@
 
 	public function getAll()
 	{
+
 		return $this->db->get($this->_table)->result();
 	}
 
-	public function getById($id)
+	public function getById()
 	{
 		return $this->db->get_where($this->_table, ["id_tamu" => $id])->row();
 	}
 
-	public function tambahDataUser()
+	public function getByName($name)
 	{
-		/*$data = [*/
-			$nama_tamu = $this->input->post('nama', true);
-			$jabatan_tamu = $this->input->post('jabatan', true);
-			$instansi_tamu = $this->input->post('instansi', true);
-			$tujuan_tamu = $this->input->post('tujuan', true);
-			$gambar_tamu = str_replace('data:image/jpeg;base64,','', $gambar_tamu);
-			$gambar_tamu = base64_decode($gambar_tamu);
-			$filename = 'image_'.time().'.png';
-			file_put_contents(FCPATH.'/uploads/'.$filename,$gambar_tamu);
-			$gambar_tamu = $this->input->post('image');
-			
-			$data = array(
-				'nama' => $nama_tamu,
-				'jabatan' => $jabatan_tamu,
-				'instansi' => $instansi_tamu,
-				'tujuan' => $tujuan_tamu,
-				'image' => $filename,
-			);
-			
-
-			/*];*/
-
-		$this->db->insert('tamu', $data); 	
+		return $this->db->get_where($this->_table, ["nama_tamu" => $name])->row();
 	}
+
+	public function cariDataTamu()
+	{
+		$keyword = $this->input->post('keyword');
+		$this->db->like('nama_tamu', $keyword);
+		/*$this->db->or_like('nrp', $keyword);
+		$this->db->or_like('email', $keyword);
+		$this->db->or_like('jurusan', $keyword);*/
+		return $this->db->get('tamu')->result_array();
+	}
+	/*private function _uploadImage()
+	{
+		    $config['upload_path']          = './upload/tamu/';
+		    $config['allowed_types']        = 'gif|jpg|png';
+		    $config['file_name']            = $this->nama_tamu;
+		    $config['overwrite']			= true;
+		    $config['max_size']             = 1024; // 1MB
+		    // $config['max_width']            = 1024;
+		    // $config['max_height']           = 768;
+
+		    $this->load->library('upload', $config);
+
+		    if ($this->upload->do_upload('gambar_tamu')) {
+		        return $this->upload->data("file_name");
+		    }
+		    
+		    return "default.jpg";
+		/*}*/
+ 
+	
+		
+	
   }
 
  ?>

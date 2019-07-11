@@ -1,21 +1,25 @@
+<!-- <script src=<?/*echo base_url*/(/*'js/sweetalert2.all.min.js'*/)  ?>></script> -->
+
 <div class="main-content-center">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
   <br>
     <div class="container">
+      
       <?php if( $this->session->flashdata('flash') ) : ?>
 
-  <div class="row mt-3">
-    <div class="col-md-6">
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-         Data User <strong>berhasil </strong><?= $this->session->flashdata('flash'); ?>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>      
-    </div>  
-  </div>
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                   Data Tamu <strong>berhasil </strong><?= $this->session->flashdata('flash'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>      
+              </div>  
+            </div>
       <?php endif; ?>
-  <div class="row mt-3">
+  
+  <div class="row mt-2">
 
     <div class="card o-hidden border-0 my-2 col-lg-12 mx-auto">
       <div class="card-body p-0">
@@ -27,10 +31,10 @@
          
         <div class="row">
            
-           <div class="col-lg-6">
+           <div class="col-lg-6 mt-4">
             <div class="text-center">
              <div class="p-1">
-              <div class="alert alert-primary" role="alert" mt-3>
+              <div class="alert alert-primary" role="alert">
                 <i class="fa fa-camera"></i>
               Kamera
             </div>
@@ -43,9 +47,13 @@
            Izinkan untuk Mengakses Webcam untuk Demo
            </video>
            <hr>
-          
+            
            <button  onclick="takeSnapshot()" class="fa fa-camera-retro" >Ambil Gambar</button>
-        
+          
+          <div class="result-img">
+            
+          </div>
+
         </div>
         </div>
         </div>
@@ -55,13 +63,12 @@
 
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Pengisian Buku Tamu</h1>
+                <h1 class="h4 text-gray-900 mb-3 fa fa-list"> Pengisian Buku Tamu</h1>
               </div>
+              <br>
               
-              <?php echo form_open('user/index');?>
-              <form class="user">
-                  
-              <form action="" method="post">
+              <?php echo form_open('user/save');?>
+               <input type="text" id="base64string" name="base64string" class="form-control">   
                <div class="form-group">
                   <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama" required>
               
@@ -75,14 +82,15 @@
                 <div class="form-group">
                 <input type="text" name="tujuan" class="form-control form-control-user" id="tujuan"  placeholder="Tujuan" required>
                 </div>
-                </div>
-               
-                <button type="submit" name="tambah" class="btn btn-primary float-right mb-3">
+                  
+
+               </div>
+
+               <!--  <script src=php"js/sweetalert2.all.min.js"></script> -->
+                <button type="submit" name="tambah" onclick="Swal.fire('Pengisian berhasil', 'Selamat Datang di Diskominfo', 'success')" class="btn btn-primary float-right mb-3">
                   Simpan
                 </button>
-               
-               
-              </form>
+
             </form>
               <br>
               
@@ -94,8 +102,11 @@
      
 
   </div>
-
-   <script type="text/javascript">
+      <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+     <script type="text/javascript">
     // seleksi elemen video
     var video = document.querySelector("#video-webcam");
 
@@ -140,7 +151,10 @@
 
     // render hasil dari canvas ke elemen img
     img.src = canvas.toDataURL('image/png');
-    document.body.appendChild(img);
+    console.log(img);
+    $('#base64string').val(img.src);
+    $('.result-img').children().remove();
+    $('.result-img').append(img);
 }
 </script>
 
