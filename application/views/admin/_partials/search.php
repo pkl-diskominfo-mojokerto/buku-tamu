@@ -8,13 +8,9 @@
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg  "><i class="fas fa-bars"></i></a></li>
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
-          <div class="search-element">
-            <input class="form-control" type="text" placeholder="Search" name="keyword" aria-label="Cari nama tamu" data-width="250">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+         
           <!--   <div class="search-backdrop"></div> -->
-            <div class="search-result">
-              <div class="search-header">
-              </div>
+           
 
                 <!-- Riwayat Pencarian -->
                <!--  Riwayat Pencarian -->
@@ -25,6 +21,5 @@
                <!--  <a href="#"></a>
                 <a href="#" class="search-close"><i class="fas fa-times"></i></a>
               </div> -->
-            </div>
-          </div>
+          
         </form>

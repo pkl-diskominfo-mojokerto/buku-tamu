@@ -23,11 +23,11 @@
 
     <div class="card o-hidden border-0 my-2 col-lg-12 mx-auto">
       <div class="card-body p-0">
-         <!--  <?php if( validation_errors() ) : ?>
+          <?php if( validation_errors() ) : ?>
               <div class="alert alert-danger" role="alert">
               <?= validation_errors(); ?>
               </div>
-           <?php endif; ?> -->
+           <?php endif; ?>
          
         <div class="row">
            
@@ -66,11 +66,11 @@
                 <h1 class="h4 text-gray-900 mb-3 fa fa-list"> Pengisian Buku Tamu</h1>
               </div>
               <br>
-              
+               <?php echo form_open('user/index');?>
               <?php echo form_open('user/save');?>
-               <input type="text" id="base64string" name="base64string" class="form-control">   
+               <input type="text" id="base64string" name="base64string" class="form-control" placeholder="Ambil Foto" >   
                <div class="form-group">
-                  <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama" required>
+                  <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama">
               
                 </div>
                 <div class="form-group">
@@ -86,7 +86,7 @@
 
                </div>
 
-               <!--  <script src=php"js/sweetalert2.all.min.js"></script> -->
+                <!-- <script src="<?php echo base_url ('js/sweetalert2.all.min.js') ?>"></script> -->
                 <button type="submit" name="tambah" onclick="Swal.fire('Pengisian berhasil', 'Selamat Datang di Diskominfo', 'success')" class="btn btn-primary float-right mb-3">
                   Simpan
                 </button>
