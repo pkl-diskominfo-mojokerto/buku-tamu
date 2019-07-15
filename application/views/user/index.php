@@ -66,9 +66,9 @@
                 <h1 class="h4 text-gray-900 mb-3 fa fa-list"> Pengisian Buku Tamu</h1>
               </div>
               <br>
-               <?php echo form_open('user/index');?>
+               
               <?php echo form_open('user/save');?>
-               <input type="text" id="base64string" name="base64string" class="form-control" placeholder="Ambil Foto" >   
+               <input type="text" id="base64string" name="base64string" class="form-control" placeholder="Ambil Foto" hidden >   
                <div class="form-group">
                   <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama">
               
