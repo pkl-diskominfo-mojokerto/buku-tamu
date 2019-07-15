@@ -32,6 +32,11 @@
 				'rules' => 'required'],
 		];
 	}
+
+	public function get_data_chart()
+	{
+		
+	}
 	
 	public function get_tamu_list($limit, $start)
 	{

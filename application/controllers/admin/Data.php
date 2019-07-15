@@ -43,7 +43,7 @@
 	        $config['last_tagl_close']  = '</span></li>'; 
 
 	        $this->pagination->initialize($config);
-        $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $data['page'] = ($this->uri->segment(1)) ? $this->uri->segment(3) : 0;
  
         //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
         $data['data'] = $this->Tamu_model->get_tamu_list($config["per_page"], $data['page']);           

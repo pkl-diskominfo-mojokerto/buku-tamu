@@ -1,10 +1,9 @@
 <?php
-Class Laporanpdf extends CI_Controller{
+Class Print_Laporan extends CI_Controller{
     
     function __construct() {
         parent::__construct();
         $this->load->model('Tamu_model');
-      
     }
     
     
@@ -36,7 +35,7 @@ Class Laporanpdf extends CI_Controller{
             0, // margin bottom
             5, // margin header
             0); // margin footer
-        $data = $this->load->view('admin/content/hasilPrint', $datas, TRUE);
+        $data = $this->load->view('admin/content/resultprintdata_user', $datas, TRUE);
         $mpdf->WriteHTML($data);
         // $mpdf->WriteCell(110, 5);
         /*$mpdf->default_font_size*/
