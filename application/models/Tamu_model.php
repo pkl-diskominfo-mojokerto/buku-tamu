@@ -35,7 +35,7 @@
 
 	public function get_data_chart()
 	{
-		
+		return $this->db->get($this->_table)->result();
 	}
 	
 	public function get_tamu_list($limit, $start)
