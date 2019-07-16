@@ -68,9 +68,9 @@
               <br>
                
               <?php echo form_open('user/save');?> 
-               <input type="text" id="base64string" name="base64string" class="form-control" placeholder="Ambil Foto" hidden >   
+               <input type="text" id="base64string" name="base64string" class="form-control" placeholder="Ambil Foto" hidden required >   
                <div class="form-group">
-                  <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama">
+                  <input type="text" name="nama" class="form-control form-control-user" id="nama"  placeholder="Nama" required>
               
                 </div>
                 <div class="form-group">
