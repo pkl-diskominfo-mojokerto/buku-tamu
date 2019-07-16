@@ -6,17 +6,24 @@
 		function __construct()
 		{
 			parent::__construct();
-			$this->load->model('Tamu_model');
-			$this->load->library('Template_Admin', 'template_admin');
+			
+			
 		}
 
 		function index()
 		{
-			$data['data'] = $this->Tamu_model->get_data_chart();	
-			$this->template_admin->display('admin/content/viewchart_user', $data);
+			$this->load->library('Template_Admin', 'template_admin');
+			$this->template_admin->display('admin/content/viewchart_user', FALSE);
 		}
 
-
+		function getChart()
+		{
+			$this->load->model('Tamu_model');
+			$x = $this->Tamu_model->get_data_chart();
+		   	echo json_encode($x);
+		    // print_r($cek);
+		    // exit();
+		}
 	}
 
 
