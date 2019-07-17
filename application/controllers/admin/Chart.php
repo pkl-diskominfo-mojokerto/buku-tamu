@@ -6,24 +6,32 @@
 		function __construct()
 		{
 			parent::__construct();
-			
-			
-		}
-
-		function index()
-		{
+			$this->load->database();
+        	$this->load->helper(array('url','html','form'));
 			$this->load->library('Template_Admin', 'template_admin');
-			$this->template_admin->display('admin/content/viewchart_user', FALSE);
+			
 		}
 
-		function getChart()
+		 public function index() 
+
 		{
-			$this->load->model('Tamu_model');
-			$x = $this->Tamu_model->get_data_chart();
-		   	echo json_encode($x);
-		    // print_r($cek);
-		    // exit();
-		}
+
+   		  // Ambil record dari data base
+	      $query =  $this->db->query("SELECT COUNT(id_tamu) as count,MONTHNAME(tanggal) as month_name FROM tamu WHERE YEAR(tanggal) = '" . date('Y') . "' GROUP BY YEAR(tanggal),MONTH(tanggal)"); 
+	 
+	      $record = $query->result();
+	      $data = [];
+	 		 
+	      foreach($record as $row) {
+	            $data['label'][] = $row->month_name;
+	            $data['data'][] = (int) $row->count;
+	      }
+	      $data['chart_data'] = json_encode($data);
+	      $this->template_admin->display('admin/content/viewchart_user', $data);
+
+
+    	}
+ 
 	}
 
 

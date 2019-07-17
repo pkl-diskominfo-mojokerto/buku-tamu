@@ -10,14 +10,11 @@
                 <div class="card-stats-item-center">
                   
                   <!-- Print laporan -->
-
-                <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-info fa fa-print" target="_blank">Download</a>
-                  <!-- Untuk Mengisi Chart Berdasar Aktifitas Data Yang Masuk Kebuku Tamu Tiap Bulan -->
                 <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-info fa fa-file-download" target="_blank"> Download</a>
-                </div>
 
+                </div>
             </div>
-          </div>
+                 </div>
             
                     
             </div>

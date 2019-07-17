@@ -10,56 +10,40 @@
               <div class="card">
                 <div class="card-body">
                   <!-- Untuk Mengisi Chart Berdasar Aktifitas Data Yang Masuk Kebuku Tamu Tiap Bulan -->
-                
-                  <div id="data_tamu" style="width:100%; height:400px;"></div>
 
-                    <script src="<?php echo base_url('assets/js/jquery.chart.js') ?>"></script>
-                    <script src="<?php echo base_url('assets/js/view.highchart.js') ?>"></script>
-                    <script src="<?php echo base_url('assets/js/view.highchart-export.js') ?>"></script>
-                    <script src="<?php echo base_url('assets/js/view.highchart-more.js') ?>"></script>
-                  <script>
-                      var ctx = document.getElementById("Highcharts").getContext("2d")
-                      var data_jumlah = [];
-                      var data_tanggal = [];
+                <canvas id="Tampil" style="100%; height:400px;"></canvas>
+                <script>
 
-                      $.post("<?php echo base_url('Admin/Chart/getChart') ?>",
-                        function (x)
-                        {
-                          var obj = JSON.parse(x);
-                          $.each(obj, function(test, item){
-                            data_tanggal.push(item.waktu);
-                            data_jumlah.push(item.jumlah);
+                var cData = JSON.parse('<?php echo $chart_data ?>')
 
-                            console.log(x);
-                          });
-
-
-                      var chart = Highcharts.chart(ctx, {
-
-                            title: {
-                                text: ''    
-                            },
-
-                            subtitle: {
-                                text: ''
-                            },
-
-                            xAxis: {
-                                categories: data_tanggal
-                            },
-
-                            series: [{
-                                name: 'Jumlah User',
-                                type: 'column',
-                                colorByPoint: true,
-                                data:   data_jumlah ,
-                                showInLegend: false
+                var ctx = document.getElementById('Tampil').getContext('2d');
+                var Tampil = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: cData.label,
+                        datasets: [{
+                            label: 'Jumlah User',
+                            data: cData.data,
+                            backgroundColor: "#6970d5",
+                            borderColor: "#6970d5",
+                            pointBorderColor: "#6970d5",
+                            pointBackgroundcolor: "#6970d5",
+                            pointHoverBackgroundcolor: "#000",
+                            pointHoverBorderColor: "#6970d5",
+                            pointBorderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
                             }]
-
-                        });
-                      });                        
-
-                  </script>
+                        }
+                    }
+                });
+                </script>
 
                 </div>
               </div>

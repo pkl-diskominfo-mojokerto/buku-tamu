@@ -33,11 +33,11 @@
 		];
 	}
 
-	public function get_data_chart()
-	{
-		$sql = "SELECT date_format(tanggal, '%d-%b-%Y') as waktu, count(id_tamu) as jumlah from tamu where substr(tanggal, 5, 7)";
-		return $this->db->query($sql)->result();
-	}
+	// public function get_data_chart()
+	// {
+	// 	$sql = "SELECT date_format(tanggal, '%d-%b-%Y') as waktu, count(id_tamu) as jumlah from tamu where YEAR(tanggal) = '2019'";
+	// 	return $this->db->query($sql)->result();
+	// }
 	
 	public function get_tamu_list($limit, $start)
 	{
