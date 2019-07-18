@@ -50,6 +50,23 @@
 		return $this->db->get($this->_table)->result();
 	}
 
+	public function tampil_tgl()
+	{/*
+		$db = $this->mysqli->conn;*/
+		/*$sql = "SELECT * FROM tamu WHERE tanggal BETWEEN 'tgl_a' AND 'tgl_b'";
+		$query = $db->query($sql) or die ($db->error);*/
+		
+
+		/*$this->db->select('tanggal');
+		$this->db->from('tamu');
+		$this->db->between("tgl_a","tgl_b");
+		$query=$this->db->get();*/
+
+		$query = $this->db->query("select * from tamu WHERE tanggal BETWEEN 'tgl_a' AND 'tgl_b'");
+		/*return $query;
+*/
+	}
+
 	public function getById()
 	{
 		return $this->db->get_where($this->_table, ["id_tamu" => $id])->row();

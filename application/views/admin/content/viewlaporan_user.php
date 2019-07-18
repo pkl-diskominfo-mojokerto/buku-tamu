@@ -13,6 +13,46 @@
                 </div>
             </div>
           </div>
+
+          <div class="row">
+            <form action="print_laporan" method="post" target="_blank">
+            <table>
+              <tr>
+                <td>
+                  <div class="form-group">Dari Tanggal</div>
+                </td>
+                <td align="center" widht="5%">
+                  <div class="form-group">:</div>
+                </td>
+                <td>
+                  <div class="form-group">
+                    <input type="date" class="form-control" name="tgl_a" required>
+                  </div>
+                </td>             
+              </tr>
+               <tr>
+                <td>
+                  <div class="form-group">Sampai Tanggal</div>
+                </td>
+                <td align="center">
+                  <div class="form-group">:</div>
+                </td>
+                <td>
+                  <div class="form-group">
+                    <input type="date" class="form-control" name="tgl_b" required>
+                  </div>
+                </td>             
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <input type="submit" name="cetak" class="btn btn-primary btn-sm" value="Cetak">
+                </td>
+              </tr>
+          </table>
+        </form>
+        </div>
             
                     
             </div>

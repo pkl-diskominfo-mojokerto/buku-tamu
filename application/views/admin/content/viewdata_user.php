@@ -34,7 +34,7 @@
                               <td><?php echo $datas->instansi_tamu ?></td>
                               <td><?php echo $datas->tujuan_tamu ?></td>
                               <td><img src="<?php echo base_url( $datas->gambar_tamu ); ?>" width="100" height="80"></td> 
-                              <td><?php echo $datas->tanggal ?></td>    
+                              <td><?php echo date('d F Y' ,strtotime ($datas->tanggal)); ?></td>    
                       </tr>
                       <?php endforeach; ?>
                                     </tbody>
