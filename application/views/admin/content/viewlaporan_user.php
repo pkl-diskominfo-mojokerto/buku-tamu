@@ -5,16 +5,9 @@
         <div class="card-stats">
             <div class="card-stats-title"><div class="card card-bar text-white shadow-primary bg-info"><h4 align="center">Print Laporan</h4></div> 
 
-               <div class="row">
-            <div class="col-lg-12">
-                <div class="card-stats-item-center">
-                  <!-- Untuk Mengisi Chart Berdasar Aktifitas Data Yang Masuk Kebuku Tamu Tiap Bulan -->
-                <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-info fa fa-file-download" target="_blank"> Download</a>
-                </div>
-            </div>
-          </div>
-
-          <div class="row">
+            <div class="row">     
+              <div class="col-lg-6">
+                  <h1 class="h4 text-gray-900 mb-3 fa fa-download"> Download Laporan Berdasar Tanggal </h1>
             <form action="print_laporan" method="post" target="_blank">
             <table>
               <tr>
@@ -47,12 +40,23 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <input type="submit" name="cetak" class="btn btn-primary btn-sm" value="Cetak">
+                  <input type="submit" name="cetak" class="btn btn-primary btn-md" value="Cetak">
                 </td>
               </tr>
           </table>
         </form>
         </div>
+      
+
+       <div class="col-lg-6">
+                <div class="card-stats-item-center">
+                   <h2 class="h4 text-gray-900 mb-3 fa fa-download"> Download Lengkap Laporan </h2>
+                   <br> 
+                  <!-- Untuk Mengisi Chart Berdasar Aktifitas Data Yang Masuk Kebuku Tamu Tiap Bulan -->
+                <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-primary fa fa-file-download" target="_blank"> Cetak </a>
+                </div>
+            </div>
+            </div>
             
                     
             </div>
@@ -61,3 +65,9 @@
        </div>
    </div>
 </div>
+
+<!--  <?php setlocale(LC_TIME, 'IND');
+                                $tgl = strftime("%d %B %Y %H:%M", $datas->tanggal) ?>
+                              <td><?php echo $tgl ?></td>
+                              </tr>
+                              <?php $tgl="" ?> -->

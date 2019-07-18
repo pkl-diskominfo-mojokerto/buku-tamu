@@ -50,11 +50,11 @@
  
         $data['pagination'] = $this->pagination->create_links();
 
-       
+       /*
         if ( $this->input->post('keyword') ) {
 				$data['tamu'] = $this->Tamu_model->cariDataTamu();
 		}
-		else 
+		else */
 			 $data['tamu'] = $this->Tamu_model->getAll();
 	
  

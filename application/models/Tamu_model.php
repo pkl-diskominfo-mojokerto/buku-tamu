@@ -33,15 +33,16 @@
 		];
 	}
 
-	public function get_data_chart()
-	{
-		return $this->db->get($this->_table)->result();
-	}
+	// public function get_data_chart()
+	// {
+	// 	$sql = "SELECT date_format(tanggal, '%d-%b-%Y') as waktu, count(id_tamu) as jumlah from tamu where YEAR(tanggal) = '2019'";
+	// 	return $this->db->query($sql)->result();
+	// }
 	
 	public function get_tamu_list($limit, $start)
 	{
-		$query = $this->db->get($this->_table, $limit, $start);
-		return $query;
+		return $this->db->get('tamu', $limit, $start)->result_array();
+		/*return $query;*/
 	}
 
 	public function getAll()
@@ -50,7 +51,7 @@
 		return $this->db->get($this->_table)->result();
 	}
 
-	public function tampil_tgl()
+	public function tampil_tgl($tgl_a, $tgl_b)
 	{/*
 		$db = $this->mysqli->conn;*/
 		/*$sql = "SELECT * FROM tamu WHERE tanggal BETWEEN 'tgl_a' AND 'tgl_b'";
@@ -62,9 +63,9 @@
 		$this->db->between("tgl_a","tgl_b");
 		$query=$this->db->get();*/
 
-		$query = $this->db->query("select * from tamu WHERE tanggal BETWEEN 'tgl_a' AND 'tgl_b'");
-		/*return $query;
-*/
+		$query = $this->db->query("select * from tamu WHERE tanggal BETWEEN '$tgl_a' AND '$tgl_b 23:59:59'");
+		return $query->result();
+
 	}
 
 	public function getById()
