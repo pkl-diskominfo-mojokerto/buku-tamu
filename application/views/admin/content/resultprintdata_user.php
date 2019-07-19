@@ -23,8 +23,9 @@
                                <td><?php echo $datas->jabatan_tamu ?></td>
                                <td><?php echo $datas->instansi_tamu ?></td>
                                <td><?php echo $datas->tujuan_tamu ?></td>
-                               
-                              <td><?php echo date('d F Y H:i:s' ,strtotime ($datas->tanggal)); ?></td>   
+                              <?php echo setlocale(LC_TIME, 'IND'); ?>
+                              <td><?php echo strftime("%d %B %Y %H:%M", strtotime($datas->tanggal)) ; ?></td>
+                              <!-- <td><?php echo $datas->tanggal; ?></td> -->
                               </tr>
                               <?php endforeach; ?>
               </table>
