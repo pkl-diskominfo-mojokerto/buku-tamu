@@ -3,7 +3,7 @@
 <script src="<?php echo base_url('assets/js/tabel1.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/tabel2.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/tabel3.js') ?>"></script>
-
+ <?php echo setlocale(LC_TIME, 'IND'); ?>
 
 <div class="main-content">
    <div class="row">
@@ -41,7 +41,8 @@
                               <td><?php echo $datas->instansi_tamu ?></td>
                               <td><?php echo $datas->tujuan_tamu ?></td>
                               <td><img src="<?php echo base_url( $datas->gambar_tamu ); ?>" width="100" height="80"></td> 
-                              <td><?php echo date('d F Y' ,strtotime ($datas->tanggal)); ?></td>    
+                              
+                              <td><?php echo strftime("%d %B %Y %H:%M", strtotime($datas->tanggal)) ; ?></td>  
                       </tr>
                       <?php endforeach; ?>
                                     </tbody>
