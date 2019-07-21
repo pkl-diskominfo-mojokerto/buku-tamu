@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-  <a href="<?= base_url(); ?>admin/overview" class="btn btn-danger btn-lg mt-3 fa fa-sign-in-alt fa-3x float-right">Admin</a>
+  <a href="<?= base_url(); ?>admin/login" class="btn btn-danger btn-lg mt-3 float-right"><i class="fas fa-sign-in-alt fa-3x"> </i>Login Admin</a>
       </div>
     </div>
   </div>

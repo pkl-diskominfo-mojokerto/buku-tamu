@@ -8,11 +8,5 @@
             $this->load->library('template_admin', 'template_admin');
    
         }
-
-		public function index()
-		{
-			$this->template_admin->display('admin/indexadmin');
-		}
-
 	}
 ?>

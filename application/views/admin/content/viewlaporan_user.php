@@ -7,12 +7,12 @@
 
             <div class="row">     
               <div class="col-lg-6">
-                  <h1 class="h4 text-gray-900 mb-3 fa fa-download"> Download Laporan Berdasar Tanggal </h1>
+                  <h6 class="h4 text-gray-900 mb-3"><i class="fa fa-download"></i>Laporan Berdasarkan Waktu</h6>
             <form action="print_laporan" method="post" target="_blank">
             <table>
               <tr>
                 <td>
-                  <div class="form-group">Dari Tanggal</div>
+                  <div class="form-group"><h6>Dari Tanggal</h6></div>
                 </td>
                 <td align="center" widht="5%">
                   <div class="form-group">:</div>
@@ -25,7 +25,7 @@
               </tr>
                <tr>
                 <td>
-                  <div class="form-group">Sampai Tanggal</div>
+                  <div class="form-group"><h6>Sampai Tanggal</h6></div>
                 </td>
                 <td align="center">
                   <div class="form-group">:</div>
@@ -48,15 +48,14 @@
         </div>
       
 
-       <div class="col-lg-6">
+              <div class="col-lg-16">
                 <div class="card-stats-item-center">
-                   <h2 class="h4 text-gray-900 mb-3 fa fa-download"> Download Lengkap Laporan </h2>
-                   <br> 
-                  <!-- Untuk Mengisi Chart Berdasar Aktifitas Data Yang Masuk Kebuku Tamu Tiap Bulan -->
-                <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-primary fa fa-file-download" target="_blank"> Cetak </a>
+                   <h2 class="h4 text-gray-900 mb-3"><i class="fa fa-download"></i> Download Lengkap Laporan </h2>
+                   
+                <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-primary" target="_blank"> Cetak </a>
                 </div>
             </div>
-            </div>
+         </div>
             
                     
             </div>

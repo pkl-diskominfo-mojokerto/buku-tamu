@@ -28,9 +28,8 @@
 	      }
 	      $data['chart_data'] = json_encode($data);
 	      $this->template_admin->display('admin/content/viewchart_user', $data);
-
-
-    	}
+	      
+		}
  
 	}
 
