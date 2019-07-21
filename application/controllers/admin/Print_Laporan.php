@@ -51,7 +51,7 @@ Class Print_Laporan extends CI_Controller{
             
             }
         else {
-
+        // $this->Tamu_model->tgl_indonesia($date)
         $datas['tamu'] = $this->Tamu_model->getAll();
         $mpdf = new \Mpdf\Mpdf([
             'default_font_size' => 12,
@@ -67,7 +67,7 @@ Class Print_Laporan extends CI_Controller{
             5, // margin_left
             5, // margin right
             7, // margin top
-            0, // margin bottom
+            5, // margin bottom
             5, // margin header
             0); // margin footer
         $data = $this->load->view('admin/content/resultprintdata_user', $datas, TRUE);
