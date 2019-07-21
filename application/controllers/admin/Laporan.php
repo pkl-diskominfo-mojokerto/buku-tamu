@@ -8,11 +8,22 @@
 			parent::__construct();
 			$this->load->model('Tamu_model');
 			$this->load->library('Template_Admin', 'template_admin');
+			$this->load->model('Admin_model');
 		}
 
 		function index()
 		{
-			$this->template_admin->display('admin/content/viewlaporan_user');
+				if($this->Admin_model->logged_id())
+	        {
+
+	            $this->template_admin->display('admin/content/viewlaporan_user');    
+
+	        }else{
+
+	            //jika session belum terdaftar, maka redirect ke halaman login
+	            redirect("admin/login");
+
+	        }
 		}
 
 

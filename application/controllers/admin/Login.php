@@ -36,7 +36,10 @@ class Login extends CI_Controller {
 
                 //get data dari FORM
                 $nama_admin = $this->input->post("nama_admin", TRUE);
-                $pass_admin = MD5($this->input->post('pass_admin', TRUE));
+                $pass_admin = $this->input->post('pass_admin', TRUE);
+
+                // $pass_admin = MD5($this->input->post('pass_admin', TRUE)); 
+
 
                 //checking data via model
                 $checking = $this->Admin_model->check_login('admin', array('nama_admin' => $nama_admin), array('pass_admin' => $pass_admin));
