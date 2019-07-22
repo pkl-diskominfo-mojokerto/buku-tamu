@@ -86,7 +86,7 @@
 
                </div>
 
-                <!-- <script src="<?php echo base_url ('js/sweetalert2.all.min.js') ?>"></script> -->
+                <script src="<?php echo base_url ('js/sweetalert2.all.min.js') ?>"></script> 
                 <button type="submit" name="tambah" onclick="Swal.fire('Pengisian berhasil', 'Selamat Datang di Diskominfo', 'success')" class="btn btn-primary float-right mb-3">
                   Simpan
                 </button>

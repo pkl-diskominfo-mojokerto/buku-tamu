@@ -1,10 +1,11 @@
+
  
 <!-- Pagination -->
 <script src="<?php echo base_url('assets/js/tabel1.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/tabel2.js') ?>"></script>
 <script src="<?php echo base_url('assets/js/tabel3.js') ?>"></script>
- <?php echo setlocale(LC_TIME, 'IND'); ?>
-
+<!--  <?php echo setlocale(LC_TIME, 'IND'); ?>
+ -->
 <div class="main-content">
    <div class="row">
        <div class="col-lg-12 col-md-9 col-sm-12">
