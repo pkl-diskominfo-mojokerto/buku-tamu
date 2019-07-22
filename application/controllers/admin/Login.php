@@ -5,8 +5,8 @@ class Login extends CI_Controller {
 
     public function __construct()
     {
+        //
         parent::__construct();
-        //load model admin
         $this->load->model('Admin_model');
         $this->load->library('Template_Login','template_login');
     }
@@ -66,10 +66,10 @@ class Login extends CI_Controller {
                     $this->template_login->display('admin/content/viewlogin_user', $data);
                 }
 
-            }else{
+                }else{
 
-                $this->template_login->display('admin/content/viewlogin_user');
-            }
+                    $this->template_login->display('admin/content/viewlogin_user');
+                }
 
         }
 
