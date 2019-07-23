@@ -65,10 +65,16 @@
 		            redirect("admin/login");
 
 		        }
+		       
 
 
 		}
-
+		 public function hapus($id)
+				{
+					$this->Tamu_model->hapusDataTamu($id);
+					$this->session->set_flashdata('flash', 'Dihapus');
+					redirect('admin/data');
+				}
 
 	}
 

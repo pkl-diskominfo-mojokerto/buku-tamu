@@ -30,6 +30,7 @@
                             <th>Tujuan</th>
                             <th>Gambar</th>
                             <th>Waktu</th>
+                            <th>Hapus</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,9 +44,13 @@
                               <td><?php echo $datas->tujuan_tamu ?></td>
                               <td><img src="<?php echo base_url( $datas->gambar_tamu ); ?>" width="100" height="80"></td> 
                               
-                              <td><?php echo strftime("%d %B %Y %H:%M", strtotime($datas->tanggal)) ; ?></td>  
+                              <td><?php echo strftime("%d %B %Y %H:%M", strtotime($datas->tanggal)) ; ?></td> 
+                              <td><a href="<?php base_url(); ?>Data/hapus/<?= $datas->id_tamu ?>" class="badge badge-danger float-right" onclick="return confirm('yakin?');">hapus</a>
+</td>
+                          
                       </tr>
                       <?php endforeach; ?>
+
                                     </tbody>
                                     <tfoot>
                                         <tr>

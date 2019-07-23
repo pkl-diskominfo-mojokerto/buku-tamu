@@ -104,6 +104,11 @@
 		return $this->db->get('tamu')->result_array();
 	}
 	
+	public function hapusDataTamu($id)
+	{
+		$this->db->where('id_tamu', $id);
+		$this->db->delete('tamu');
+	}
 	/*private function _uploadImage()
 	{
 		    $config['upload_path']          = './upload/tamu/';
