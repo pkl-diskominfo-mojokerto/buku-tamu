@@ -37,8 +37,6 @@
                 </td>             
               </tr>
               <tr>
-                <td></td>
-                <td></td>
                 <td>
                   <input type="submit" name="cetak" class="btn btn-primary btn-md" value="Cetak">
                 </td>

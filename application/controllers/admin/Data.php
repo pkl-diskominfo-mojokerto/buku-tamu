@@ -70,14 +70,25 @@
 
 		}
 		 public function hapus($id)
+
+
 				{
-					$this->Tamu_model->hapusDataTamu($id);
-					$this->session->set_flashdata('flash', 'Dihapus');
-					redirect('admin/data');
+					if($this->Admin_model->logged_id())
+			        {
+			        	if ($this->Tamu_model->hapusDataTamu($id)) 
+			        	{
+			        		$this->session->set_flashdata('flash', 'Dihapus');
+							redirect('admin/data');
+			        	}else{
+			        		redirect("admin/data");	
+			        	}
+			        }else{
+			            //jika session belum terdaftar, maka redirect ke halaman login
+			            redirect("admin/login");
+
+			        }
 				}
 
-	}
 
-
-
+}
 ?>
