@@ -46,7 +46,9 @@
 			/*var_dump($this->input->post());*/
 			$this->base64_to_jpeg($base64string, $output_file);
 			$this->tambahDataUser($output_file);
-			redirect('user/index');
+			echo "<script>alert('Berhasil');</script>";
+			redirect('user/index', 'refresh');
+
 		}
 		public function tambahDataUser($filename)
 	{

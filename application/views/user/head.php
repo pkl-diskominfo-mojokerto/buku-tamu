@@ -2,11 +2,19 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-  <a href="<?= base_url(); ?>admin/login" class="btn btn-danger btn-lg mt-3 float-right"><i class="fas fa-sign-in-alt fa-3x"> </i>Login Admin</a>
+      <div class="col-lg-2">
+       <!--  <img src="assets/img/kabmojokerto.png"> -->
+       <img src="<?php echo base_url(); ?>assets/img/kabmojokerto2.png">
+      </div>
+      <div class="col-lg-8">
+        <img src="<?php echo base_url(); ?>assets/img/labeldiskominfo.png">
+      </div>
+      
+        <div class="col-lg-2">
+    <a href="<?= base_url(); ?>admin/login" class="btn btn-danger btn-lg mt-3 float-right"><i class="fas fa-sign-in-alt fa-3x"> </i>Login Admin</a>
+        </div>
       </div>
     </div>
-  </div>
   
   <div class="row">
 
