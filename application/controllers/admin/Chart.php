@@ -16,7 +16,7 @@
 		 public function index() 
 
 		{
-
+			// Cek Session
 			if($this->Admin_model->logged_id())
 	        {
 
@@ -31,8 +31,9 @@
 			            $data['data'][] = (int) $row->count;
 			      }
 			      $data['chart_data'] = json_encode($data);
-			      $this->template_admin->display('admin/content/viewchart_user', $data);        
+			      $this->template_admin->display('admin/content/viewchart_user', $data);
 
+			// Apabila session tidak terdaftar
 	        }else{
 
 	            //jika session belum terdaftar, maka redirect ke halaman login
