@@ -5,10 +5,9 @@
             <!-- Untuk Status dan Riwayat Aktifitas Admin -->
             <div class="d-md-none d-lg-inline-block"></div></a>
             <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logged in <?php echo date('d F y'); ?></div>
               <div class="dropdown-divider"></div>
               <a href="<?= base_url(); ?>admin/login/logout" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Logout
+                <i class="fas fa-sign-out-alt"></i>Logout 
               </a>
             </div> 
           </li>

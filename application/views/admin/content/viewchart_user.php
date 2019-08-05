@@ -20,7 +20,7 @@
                             <option <?php echo $tahun_selected == '2024'?'selected':'' ?> value="2024">2024</option>
                             <option <?php echo $tahun_selected == '2025'?'selected':'' ?> value="2025">2025</option>
                         </select>
-                        <button value="cari" type="submit">Cari</button>
+                        <h6 value="cari" type="submit"><i class="fas fa-search"></i> Cari</h6>
                     </form>
                     </div>
 
@@ -59,11 +59,11 @@
                         }
                     }
                 });
-                </script>
-                <button onclick="window.print()"  target="_blank">Print</button>
-                <script>
+
+                        </script>   
+                        <button onclick="window.print()"  target="_blank">Print</button>
+                        <script>
                  
-                
                 </script>
 
                 </div>
