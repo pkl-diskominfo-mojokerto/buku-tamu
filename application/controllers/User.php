@@ -85,7 +85,7 @@
 		    fwrite( $ifp, base64_decode( $data[ 1 ] ) );
 		    // clean up the file resource
 		    fclose( $ifp ); 
-		    return $output_file; 
+		     
 		}
 	}
  ?>

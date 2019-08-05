@@ -52,6 +52,11 @@
                    
                 <a href="<?= base_url('admin/print_laporan') ?>" class="btn btn-primary" target="_blank"> Cetak </a>
                 </div>
+                <br>
+                <br>
+                
+                  
+               
             </div>
          </div>
             
@@ -62,6 +67,7 @@
        </div>
    </div>
 </div>
+
 
 <!--  <?php setlocale(LC_TIME, 'IND');
                                 $tgl = strftime("%d %B %Y %H:%M", $datas->tanggal) ?>
